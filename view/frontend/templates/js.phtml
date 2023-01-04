@@ -1,0 +1,15 @@
+<?php
+/**
+ * @var Js $block
+ */
+
+use Extend\CustomGroupRules\Block\Js;
+use Extend\CustomCartCss\ViewModel\CustomCartCss;
+
+/** @var CustomCartCss $viewModel */
+$viewModel = $block->getData('viewModel');
+?>
+<script>
+    window.valuesConfigCustomCartCssEnabled = '<?php echo $viewModel->isCustomCartCssEnabled(); ?>';
+    window.valuesConfigCustomCartCssValue = '<?php echo $viewModel->getCustomCartCssValue(); ?>';
+</script>
